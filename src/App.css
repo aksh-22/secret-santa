@@ -1,0 +1,152 @@
+body {
+  margin: 0;
+  font-family: 'Trebuchet MS', sans-serif;
+  background: linear-gradient(to bottom, #2a5298, #1e3c72);
+  color: white;
+  overflow-x: hidden;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+  background-color: #841515;
+  color: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+  color: #fdd835;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  animation: fadeInSlide 1s ease-in-out forwards;
+}
+
+.input {
+  width: 80%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: none;
+}
+
+.button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #45a049;
+  transform: scale(1.1);
+}
+
+.participant-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.assignments-list {
+  list-style: none;
+  padding: 0;
+}
+
+.icon {
+  color: gold;
+  margin-right: 5px;
+}
+
+@keyframes fadeInSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.draw-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.drawn-list {
+  width: 30%;
+}
+
+.strikethrough {
+  text-decoration: line-through;
+  color: gray;
+  font-style: italic;
+}
+
+.snow-bg {
+  position: relative;
+  min-height: 100vh;
+  background: url('https://svgshare.com/i/tqM.svg') no-repeat center top / cover;
+  overflow-x: hidden;
+}
+
+.snow-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://svgshare.com/i/tpv.svg') repeat;
+  animation: snow 15s linear infinite;
+  opacity: 0.7;
+}
+
+@keyframes snow {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(100%);
+  }
+}
